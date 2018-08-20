@@ -8,8 +8,8 @@ Principles of mnml components:
 
 1. A component should have a single responsibility (Ex: connect with Redux)
 2. Components should be grouped together by feature (Ex: ButtonContainer, ButtonWithState, ButtonPresenter)
-3. Componet groups should have a wrapper component (Ex: Button)
-4. Each compoent should have a separate test file (except for the wrapper component)
+3. Component groups should have a wrapper component (Ex: Button)
+4. Each component should have a separate test file (except for the wrapper component)
 
 ## Quickstart
 
