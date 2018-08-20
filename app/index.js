@@ -20,11 +20,18 @@ module.exports = class extends Generator {
         message: "Enter the destination path: ",
         default: "./"
       },
+      // TODO: Add Apollo support (then uncomment)
+      // {
+      //   type: "list",
+      //   name: "stateManagementLibrary",
+      //   message: "Select which state management library you're using: ",
+      //   choices: ["Redux", "Apollo"]
+      // },
       {
         type: "list",
         name: "componentType",
         message: "Select type of component: ",
-        choices: ["Container Presenter", "Container WithState Presenter"]
+        choices: ["Presenter", "Container Presenter", "Container WithState Presenter"]
       }
     ]).then(answers => {
       const { componentName, destinationPath, componentType } = answers;
@@ -33,15 +40,21 @@ module.exports = class extends Generator {
       this.destinationRoot(destinationPath);
 
       switch (componentType) {
-        case "Container WithState Presenter":
+        case "Presenter":
           this.fs.copyTpl(
-            this.templatePath("Container-WithState-Presenter"),
+            this.templatePath("Presenter"),
             this.destinationPath(componentName),
             { componentName }
           );
         case "Container Presenter":
           this.fs.copyTpl(
             this.templatePath("Container-Presenter"),
+            this.destinationPath(componentName),
+            { componentName }
+          );
+        case "Container WithState Presenter":
+          this.fs.copyTpl(
+            this.templatePath("Container-WithState-Presenter"),
             this.destinationPath(componentName),
             { componentName }
           );
