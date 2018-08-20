@@ -1,11 +1,12 @@
 # mnml React Component Generator
 
 When components obey the single responsibility principle, they're easier to develop, test, refactor, troubleshoot...
+
 mnml is a Yeoman scaffolding generator for creating React components that align with this philosophy.
 
 Principles of mnml components:
+
 1. A component should have a single responsibility (Ex: connect with Redux)
-  i. ddd
 2. Components should be grouped together by feature (Ex: ButtonContainer, ButtonWithState, ButtonPresenter)
 3. Componet groups should have a wrapper component (Ex: Button)
 4. Each compoent should have a separate test file (except for the wrapper component)
