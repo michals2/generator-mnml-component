@@ -35,6 +35,23 @@ yo mnml-component
 
 These are the possible Components that could be generated using mnml-component
 
+### Presenter
+
+#### Folder Structure
+
+- ComponentName
+  - `index.js`
+  - `ComponentNamePresenter.js`
+  - `__tests__`
+    - `ComponentNamePresenter.spec.js`
+
+#### Component Hierarchy
+
+```
+ComponentName
+  ComponentNamePresenter
+```
+
 ### Container Presenter
 
 #### Folder Structure
@@ -76,30 +93,4 @@ ComponentName
   ComponentNameContainer
     ComponentNameWithState
       ComponentNamePresenter
-```
-
-### Container WithState WithLifecycle Presenter
-
-#### Folder Structure
-
-- ComponentName
-  - `index.js`
-  - `ComponentNameContainer.js`
-  - `ComponentNameWithState.js`
-  - `ComponentNameWithLifecycle.js`
-  - `ComponentNamePresenter.js`
-  - `__tests__`
-    - `ComponentNameContainer.spec.js`
-    - `ComponentNameWithState.spec.js`
-    - `ComponentNameWithLifecycle.spec.js`
-    - `ComponentNamePresenter.spec.js`
-
-#### Component Hierarchy
-
-```
-ComponentName
-  ComponentNameContainer
-    ComponentNameWithState
-      ComponentNameWithLifecycle
-        ComponentNamePresenter
 ```
