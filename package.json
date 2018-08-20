@@ -1,6 +1,6 @@
 {
   "name": "generator-mnml-component",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "yeoman generator for minimalistic React components",
   "main": "index.js",
   "scripts": {
@@ -25,8 +25,6 @@
   },
   "homepage": "https://github.com/michals2/generator-mnml-component#readme",
   "dependencies": {
-    "decamelize": "^2.0.0",
-    "uppercamelcase": "^3.0.0",
     "yeoman-generator": "^3.1.1"
   },
   "files": [
