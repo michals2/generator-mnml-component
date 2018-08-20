@@ -24,10 +24,7 @@ module.exports = class extends Generator {
         type: "list",
         name: "componentType",
         message: "Select type of component: ",
-        choices: [
-          "Container WithState Presenter",
-          "Container Presenter",
-        ]
+        choices: ["Container Presenter", "Container WithState Presenter"]
       }
     ]).then(answers => {
       const { componentName, destinationPath, componentType } = answers;
