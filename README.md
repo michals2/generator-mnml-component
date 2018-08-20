@@ -16,13 +16,13 @@ Principles of mnml components:
 Install Yeoman
 
 ```bash
-yarn install -g yo
+yarn global add yo
 ```
 
 Install the mnml Component Generator
 
 ```bash
-yarn install -g generator-mnml-component
+yarn global add generator-mnml-component
 ```
 
 Generate a Component
