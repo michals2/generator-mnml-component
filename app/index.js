@@ -20,13 +20,6 @@ module.exports = class extends Generator {
         message: "Enter the destination path: ",
         default: "./"
       },
-      // TODO: Add Apollo support (then uncomment)
-      // {
-      //   type: "list",
-      //   name: "stateManagementLibrary",
-      //   message: "Select which state management library you're using: ",
-      //   choices: ["Redux", "Apollo"]
-      // },
       {
         type: "list",
         name: "componentType",
