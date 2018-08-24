@@ -94,3 +94,7 @@ ComponentName
     ComponentNameWithState
       ComponentNamePresenter
 ```
+
+## Todo
+- [ ] add support for Apollo client
+- [ ] add support for TypeScript
