@@ -11,7 +11,7 @@ module.exports = class extends Generator {
       {
         type: "input",
         name: "componentName",
-        message: "Enter a name for the new component: ",
+        message: "Enter a name for the new component group: ",
         default: "MyNewComponent"
       },
       {
