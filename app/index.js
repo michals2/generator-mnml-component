@@ -24,7 +24,11 @@ module.exports = class extends Generator {
         type: "list",
         name: "componentType",
         message: "Select type of component: ",
-        choices: ["Presenter", "Container Presenter", "Container WithState Presenter"]
+        choices: [
+          "Presenter",
+          "Container Presenter",
+          "Container WithState Presenter"
+        ]
       }
     ]).then(answers => {
       const { componentName, destinationPath, componentType } = answers;
@@ -32,6 +36,7 @@ module.exports = class extends Generator {
       // create root folder
       this.destinationRoot(destinationPath);
 
+      console.log({ componentType });
       switch (componentType) {
         case "Presenter":
           this.fs.copyTpl(
@@ -39,18 +44,21 @@ module.exports = class extends Generator {
             this.destinationPath(componentName),
             { componentName }
           );
+          break;
         case "Container Presenter":
           this.fs.copyTpl(
             this.templatePath("Container-Presenter"),
             this.destinationPath(componentName),
             { componentName }
           );
+          break;
         case "Container WithState Presenter":
           this.fs.copyTpl(
             this.templatePath("Container-WithState-Presenter"),
             this.destinationPath(componentName),
             { componentName }
           );
+          break;
       }
     });
   }
